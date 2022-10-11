@@ -1,44 +1,41 @@
 class EN(object):
-    INIT_MSG = "<b>Hello {} Sir</b>"
+    INIT_MSG = "<b>Hi {}, This is a Hi-Fi Music Downloader Bot to Provide High Quality Music.</b>"
 
     START_TEXT = """
-<b>Hello {} Sir</b>,
-Iam a Tidal DL Bot. Used to download songs from Tidal.
+<b>Hi {}</b>,
+<i>This is a Multi-Platfrom Song Downloader Bot. Download High Quality Music free of cost</i>.
 """
 
     HELP_MSG = """
-<b>Hello {} Sir</b>,
+<b>Hi {}</b>,
 
-Iam a Tidal DL Bot. Used to download songs from tidal.com.
+<i>This is a Multi-Platfrom Song Downloader Bot.
 
-You can download all songs at master quality.
+Download All songs at Master Quality</i>.
 
-See <code>/{}</code> for commands.
+Use <code>/{}</code> for commands.
 """
 
     CMD_LIST = """
-<b>Hello {0} Sir</b>,
+<b>Hi {0}</b>,
 
 The commands for the bot are described below:
 
 <code>/{1}</code> - Shows help message.
-<code>/{2}</code> - Shows the list of commands.
-<code>/{3}</code> - Downloads the song from Tidal Link.
-<code>/{4}</code> - Authenticates the bot in the chat<b>[ADMIN ONLY]</b>.
-<code>/{5}</code> - Runs a shell command <b>[ADMIN ONLY]</b>.
-<code>/{6}</code> - Open Settings Panel of Bot. <b>[ADMIN ONLY]</b>.
+<code>/{2}</code> - Downloads the song from Tidal Link.
+<code>/{3}</code> - Authenticates the bot in the chat<b>[ADMIN ONLY]</b>.
+<code>/{4}</code> - Runs a shell command <b>[ADMIN ONLY]</b>.
+<code>/{5}</code> - Open Settings Panel of Bot. <b>[ADMIN ONLY]</b>.
 
 Help for each command is in shown when you type the command.
 
 Feel free to ask doubts in Discussion Group.
 """
 
-    INIT_DOWNLOAD = "Trying to initialize download..."
-    ERR_NO_LINK = "No link found in message."
+    INIT_DOWNLOAD = "Trying to initialize the Download..."
     FILE_EXIST = "File already exist in the channel.\n\nTitle : <code>{}</code>\n\nClick below to get file."
-
     ALREADY_AUTH = "Your authentication is already done.\nIts is valid for {}"
-    AUTH_DISABLED = "Cannot download because authentication is disabled."
+    NO_AUTH = "AUTH DISABLED"
 #
 #
 # INLINE MODE TEXTS..............................................................
@@ -58,23 +55,23 @@ Flags are :
     INLINE_NO_RESULT = "No results found"
 
     INPUT_MESSAGE_TRACK = """
-💽 <b>Title :</b> {0}
-👤 <b>Artist :</b> {1}
-💿 <b>Album :</b> {2}
-🕒 <b>Duration :</b> {3}
+● <b>Title :</b> <i>{0}</i>
+● <b>Artist :</b> <i>{1}</i>
+● <b>Album :</b> <i>{2}</i>
+● <b>Duration :</b> <i>{3}</i>
 """
 
     INPUT_MESSAGE_ALBUM = """
-💽 <b>Title :</b> {0}
-👤 <b>Artist :</b> {1}
-📀 <b>Tracks :</b> {2}
-📅 <b>Release Date :</b> {3}
+● <b>Title :</b> <i>{0}</i>
+● <b>Artist :</b> <i>{1}</i>
+● <b>Tracks :</b> <i>{2}</i>
+● <b>Release Date :</b> <i>{3}</i>
 """
 
     INLINE_MEDIA_SEARCH = """
-<b>Title :</b> {0}
+<b>Title :</b> <i>{0}</i>
 
-<b>Artist :</b> {1}
+<b>Artist :</b> <i>{1}</i>
 """
 #
 #
@@ -82,12 +79,12 @@ Flags are :
 #
 #
     ALBUM_DETAILS = """
-💽 <b>Title :</b> {0}
-👤 <b>Artist :</b> {1}
-📅 <b>Release Date :</b> {2}
-📀 <b>Number of Tracks :</b> {3}
-🕒 <b>Duration :</b> {4}
-🔢 <b>Number of Volumes :</b> {5}
+● <b>Title :</b> <i>{0}</i>
+● <b>Artist :</b> <i>{1}</i>
+● <b>Release Date :</b> <i>{2}</i>
+● <b>Number of Tracks :</b> <i>{3}</i>
+● <b>Duration :</b> <i>{4}</i>
+● <b>Number of Volumes :</b> <i>{5}</i>
 """
 #
 #
@@ -103,15 +100,66 @@ Flags are :
 #
 #
     INIT_SETTINGS_MENU = "<b>Welcome to Bot Settings Menu.</b>\n\nChoose the option to open its settings."
-    TIDAL_AUTH_PANEL = "<b>Configure Tidal Authentication</b>\n\n"
-    AUTH_SUCCESFULL_MSG = "Authentication successful.\n\n"
+    TIDAL_AUTH_PANEL = "<b>Configure Tidal Authentication\n\nAuth Status : </b>{}"
+    AUTH_SUCCESFULL_MSG = "Authentication successful.\n\nIt is now valid for {}"
     WARN_REMOVE_AUTH = "<b>You are about to remove authentication.</b>\n\nPress again to confirm."
+    AUTH_NEXT_STEP = "Go to {} within the next {} to complete setup."
+    REMOVED_AUTH_TIDAL = "Removed Tidal Login Successfully"
+    CHANGE_QUALITY = "<b>Click to set the quality\n\nCurrent Quality :</b> <code>{}</code>"
+    WRONG_USER_CLICK = "You are not allowed to click this button."
+    SELECT_API_KEY = """
+<b><u>API KEY SETTING PANEL</u></b>
+Current API Platform : <code>{0}</code>
+Available Formats : <code>{1}</code>
+API Key Valid : <code>{2}</code>
+
+<b><u>API PLATFORM INFO</u></b>
+{3}
+<b>RELOGIN NEEDED AFTER CHANGING API PLATFORM</b>
+"""
+    API_KEY_CHANGED = "API Key Changed Successfully To - {} - {}\nNow Relogin Tidal for the new api to work."
 #
 #
 # INDEXING
 #
 #
     INIT_INDEX = "Initializing indexing...\nThis may take a while."
-    ERR_INDEX = "Error while indexing.\n\n{}"
     INDEX_DONE = "Indexing done."
-    ERR_NO_CHANNEL = "No channel found to index.\nPlease check you ENV variables"
+#
+#
+# BUTTONS
+#
+#
+    JOIN_MUSIC_STORAGE = "Join Music Storage"
+    GET_FILE = "Get File"
+    LOGIN_TIDAL = "Click To Login"
+    TG_AUTH = "TG AUTHS"
+    TIDAL_AUTH = "TIDAL AUTH"
+    CLOSE = "CLOSE"
+    REMOVE_TIDAL_AUTH = "Remove Auth"
+    ADD_TIDAL_AUTH = "Add Auth"
+    MAIN_MENU = "MAIN MENU"
+    COMMANDS = "COMMANDS"
+    BOT_LANGUAGE = "BOT LANGUAGE"
+    TIDAL_QUALITY = "TIDAL QUALITY - {}"
+    TIDAL_QUALITY_HIFI = "HIFI"
+    TIDAL_QUALITY_HIGH = "HIGH"
+    TIDAL_QUALITY_MASTER = "MASTER"
+    TIDAL_QUALITY_NORMAL = "NORMAL"
+    # INLINE BUTTONS
+    SEARCH_AGAIN = "Search Again"
+    MUSIC_C_JOIN = "Join Music Storage"
+    LINK = "Link"
+    SEARCH = "Search"
+    API_KEY_BUTTON = "API KEY"
+
+#
+#
+# ERRORS
+#
+#
+    ERR_VARS = "Required Variables Missing......\nPlease check everything again."
+    ERR_AUTH_CHECK = "Couldn't download because : {}"
+    ERR_NO_LINK = "No link found in message."
+    ERR_INDEX = "Error while indexing.\n\n{}"
+    ERR_API_KEY = "API Key Deprecated. Please change your API Key Index."
